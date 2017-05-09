@@ -1,0 +1,1 @@
+cmd_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.ko /home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.o /home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o

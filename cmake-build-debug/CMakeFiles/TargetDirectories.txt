@@ -1,0 +1,3 @@
+/home/slee/CLionProjects/linux-device-drivers-c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/slee/CLionProjects/linux-device-drivers-c/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/slee/CLionProjects/linux-device-drivers-c/cmake-build-debug/CMakeFiles/linux_device_drivers_c.dir
