@@ -123,6 +123,33 @@ linux_device_drivers_c/fast:
 	$(MAKE) -f CMakeFiles/linux_device_drivers_c.dir/build.make CMakeFiles/linux_device_drivers_c.dir/build
 .PHONY : linux_device_drivers_c/fast
 
+ldd3/scull/test/main.o: ldd3/scull/test/main.c.o
+
+.PHONY : ldd3/scull/test/main.o
+
+# target to build an object file
+ldd3/scull/test/main.c.o:
+	$(MAKE) -f CMakeFiles/linux_device_drivers_c.dir/build.make CMakeFiles/linux_device_drivers_c.dir/ldd3/scull/test/main.c.o
+.PHONY : ldd3/scull/test/main.c.o
+
+ldd3/scull/test/main.i: ldd3/scull/test/main.c.i
+
+.PHONY : ldd3/scull/test/main.i
+
+# target to preprocess a source file
+ldd3/scull/test/main.c.i:
+	$(MAKE) -f CMakeFiles/linux_device_drivers_c.dir/build.make CMakeFiles/linux_device_drivers_c.dir/ldd3/scull/test/main.c.i
+.PHONY : ldd3/scull/test/main.c.i
+
+ldd3/scull/test/main.s: ldd3/scull/test/main.c.s
+
+.PHONY : ldd3/scull/test/main.s
+
+# target to generate assembly for a file
+ldd3/scull/test/main.c.s:
+	$(MAKE) -f CMakeFiles/linux_device_drivers_c.dir/build.make CMakeFiles/linux_device_drivers_c.dir/ldd3/scull/test/main.c.s
+.PHONY : ldd3/scull/test/main.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... linux_device_drivers_c"
+	@echo "... ldd3/scull/test/main.o"
+	@echo "... ldd3/scull/test/main.i"
+	@echo "... ldd3/scull/test/main.s"
 .PHONY : help
 
 

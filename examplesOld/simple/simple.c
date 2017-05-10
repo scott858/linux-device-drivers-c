@@ -15,7 +15,7 @@
  * $Id: simple.c,v 1.12 2005/01/31 16:15:31 rubini Exp $
  */
 
-#include <linux/config.h>
+//#include <linux/config.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
 #include <linux/init.h>
@@ -32,6 +32,12 @@
 
 #include <linux/device.h>
 
+#define VM_RESERVED (VM_DONTEXPAND | VM_DONTDUMP)
+
+#ifndef NOPAGE_SIGBUS
+#define NOPAGE_SIGBUS 	VM_FAULT_SIGBUS
+#endif
+
 static int simple_major = 0;
 module_param(simple_major, int, 0);
 MODULE_AUTHOR("Jonathan Corbet");
@@ -40,7 +46,7 @@ MODULE_LICENSE("Dual BSD/GPL");
 /*
  * Open the device; in fact, there's nothing to do here.
  */
-static int simple_open (struct inode *inode, struct file *filp)
+static int my_simple_open (struct inode *inode, struct file *filp)
 {
 	return 0;
 }
@@ -125,7 +131,7 @@ struct page *simple_vma_nopage(struct vm_area_struct *vma,
 static struct vm_operations_struct simple_nopage_vm_ops = {
 	.open =   simple_vma_open,
 	.close =  simple_vma_close,
-	.nopage = simple_vma_nopage,
+//	.nopage = simple_vma_nopage,
 };
 
 static int simple_nopage_mmap(struct file *filp, struct vm_area_struct *vma)
@@ -166,7 +172,7 @@ static void simple_setup_cdev(struct cdev *dev, int minor,
 /* Device 0 uses remap_pfn_range */
 static struct file_operations simple_remap_ops = {
 	.owner   = THIS_MODULE,
-	.open    = simple_open,
+	.open    = my_simple_open,
 	.release = simple_release,
 	.mmap    = simple_remap_mmap,
 };
@@ -174,7 +180,7 @@ static struct file_operations simple_remap_ops = {
 /* Device 1 uses nopage */
 static struct file_operations simple_nopage_ops = {
 	.owner   = THIS_MODULE,
-	.open    = simple_open,
+	.open    = my_simple_open,
 	.release = simple_release,
 	.mmap    = simple_nopage_mmap,
 };

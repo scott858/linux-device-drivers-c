@@ -1,23 +1,9 @@
-cmd_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o := arm-linux-gnueabihf-gcc -Wp,-MD,/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/.hello.mod.o.d  -nostdinc -isystem /usr/local/gcc-linaro-5.2-2015.11-2-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/5.2.1/include -I/home/slee/repos/toradex/linux-toradex/arch/arm/include -Iarch/arm/include/generated  -Iinclude -I/home/slee/repos/toradex/linux-toradex/arch/arm/include/uapi -Iarch/arm/include/generated/uapi -I/home/slee/repos/toradex/linux-toradex/include/uapi -Iinclude/generated/uapi -include /home/slee/repos/toradex/linux-toradex/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -std=gnu89 -O2 -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fstack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -DCC_HAVE_ASM_GOTO  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(hello.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(hello)" -DMODULE  -c -o /home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o /home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.c
+cmd_/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.o := arm-linux-gnueabihf-gcc -Wp,-MD,/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/.main.o.d  -nostdinc -isystem /usr/local/gcc-linaro-5.2-2015.11-2-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/5.2.1/include -I/home/slee/repos/toradex/linux-toradex/arch/arm/include -Iarch/arm/include/generated  -Iinclude -I/home/slee/repos/toradex/linux-toradex/arch/arm/include/uapi -Iarch/arm/include/generated/uapi -I/home/slee/repos/toradex/linux-toradex/include/uapi -Iinclude/generated/uapi -include /home/slee/repos/toradex/linux-toradex/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -std=gnu89 -O2 -fno-dwarf2-cfi-asm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fstack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -DCC_HAVE_ASM_GOTO -O2 -I/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/../include  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(main)"  -D"KBUILD_MODNAME=KBUILD_STR(scull)" -c -o /home/slee/CLionProjects/linux-device-drivers-c/examples/scull/.tmp_main.o /home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.c
 
-source_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o := /home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.c
+source_/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.o := /home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.c
 
-deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o := \
-    $(wildcard include/config/module/unload.h) \
-  include/linux/module.h \
-    $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/modules.h) \
-    $(wildcard include/config/unused/symbols.h) \
-    $(wildcard include/config/module/sig.h) \
-    $(wildcard include/config/generic/bug.h) \
-    $(wildcard include/config/kallsyms.h) \
-    $(wildcard include/config/smp.h) \
-    $(wildcard include/config/tracepoints.h) \
-    $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/event/tracing.h) \
-    $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/debug/set/module/ronx.h) \
+deps_/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.o := \
+  include/linux/semaphore.h \
   include/linux/list.h \
     $(wildcard include/config/debug/list.h) \
   include/linux/types.h \
@@ -53,24 +39,12 @@ deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o :
   include/linux/poison.h \
     $(wildcard include/config/illegal/pointer/value.h) \
   /home/slee/repos/toradex/linux-toradex/include/uapi/linux/const.h \
-  include/linux/stat.h \
-  /home/slee/repos/toradex/linux-toradex/arch/arm/include/uapi/asm/stat.h \
-  include/uapi/linux/stat.h \
-  include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
-  include/linux/cache.h \
-    $(wildcard include/config/arch/has/cache/line/size.h) \
-  include/uapi/linux/kernel.h \
-  /home/slee/repos/toradex/linux-toradex/include/uapi/linux/sysinfo.h \
-  /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/cache.h \
-    $(wildcard include/config/arm/l1/cache/shift.h) \
-    $(wildcard include/config/aeabi.h) \
-  include/linux/seqlock.h \
-    $(wildcard include/config/debug/lock/alloc.h) \
   include/linux/spinlock.h \
+    $(wildcard include/config/smp.h) \
     $(wildcard include/config/debug/spinlock.h) \
     $(wildcard include/config/generic/lockbreak.h) \
     $(wildcard include/config/preempt.h) \
+    $(wildcard include/config/debug/lock/alloc.h) \
   include/linux/typecheck.h \
   include/linux/preempt.h \
     $(wildcard include/config/debug/preempt.h) \
@@ -82,7 +56,9 @@ deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o :
   include/linux/stringify.h \
   include/linux/export.h \
     $(wildcard include/config/have/underscore/symbol/prefix.h) \
+    $(wildcard include/config/modules.h) \
     $(wildcard include/config/modversions.h) \
+    $(wildcard include/config/unused/symbols.h) \
   /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/linkage.h \
   arch/arm/include/generated/asm/preempt.h \
   include/asm-generic/preempt.h \
@@ -90,6 +66,7 @@ deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o :
     $(wildcard include/config/compat.h) \
     $(wildcard include/config/debug/stack/usage.h) \
   include/linux/bug.h \
+    $(wildcard include/config/generic/bug.h) \
   /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/thumb2/kernel.h) \
@@ -111,6 +88,8 @@ deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o :
     $(wildcard include/config/prove/locking.h) \
     $(wildcard include/config/panic/timeout.h) \
     $(wildcard include/config/ring/buffer.h) \
+    $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/ftrace/mcount/record.h) \
   /usr/local/gcc-linaro-5.2-2015.11-2-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/5.2.1/include/stdarg.h \
   include/linux/bitops.h \
   /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/bitops.h \
@@ -148,6 +127,13 @@ deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o :
   include/linux/init.h \
     $(wildcard include/config/broken/rodata.h) \
   include/linux/kern_levels.h \
+  include/linux/cache.h \
+    $(wildcard include/config/arch/has/cache/line/size.h) \
+  include/uapi/linux/kernel.h \
+  /home/slee/repos/toradex/linux-toradex/include/uapi/linux/sysinfo.h \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/cache.h \
+    $(wildcard include/config/arm/l1/cache/shift.h) \
+    $(wildcard include/config/aeabi.h) \
   include/linux/dynamic_debug.h \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
@@ -236,6 +222,21 @@ deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o :
     $(wildcard include/config/cpu/v6.h) \
   include/asm-generic/cmpxchg-local.h \
   include/asm-generic/atomic-long.h \
+  include/linux/module.h \
+    $(wildcard include/config/sysfs.h) \
+    $(wildcard include/config/module/sig.h) \
+    $(wildcard include/config/kallsyms.h) \
+    $(wildcard include/config/tracepoints.h) \
+    $(wildcard include/config/event/tracing.h) \
+    $(wildcard include/config/module/unload.h) \
+    $(wildcard include/config/constructors.h) \
+    $(wildcard include/config/debug/set/module/ronx.h) \
+  include/linux/stat.h \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/uapi/asm/stat.h \
+  include/uapi/linux/stat.h \
+  include/linux/time.h \
+    $(wildcard include/config/arch/uses/gettimeoffset.h) \
+  include/linux/seqlock.h \
   include/linux/math64.h \
     $(wildcard include/config/arch/supports/int128.h) \
   include/uapi/linux/time.h \
@@ -419,9 +420,90 @@ deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o :
     $(wildcard include/config/have/mod/arch/specific.h) \
     $(wildcard include/config/modules/use/elf/rel.h) \
     $(wildcard include/config/modules/use/elf/rela.h) \
-  include/linux/vermagic.h \
-  include/generated/utsrelease.h \
+  include/linux/slab.h \
+    $(wildcard include/config/slab/debug.h) \
+    $(wildcard include/config/kmemcheck.h) \
+    $(wildcard include/config/failslab.h) \
+    $(wildcard include/config/slob.h) \
+    $(wildcard include/config/slab.h) \
+    $(wildcard include/config/slub.h) \
+    $(wildcard include/config/debug/slab.h) \
+  include/linux/kmemleak.h \
+    $(wildcard include/config/debug/kmemleak.h) \
+  include/linux/slub_def.h \
+    $(wildcard include/config/slub/stats.h) \
+    $(wildcard include/config/memcg/kmem.h) \
+  include/linux/fs.h \
+    $(wildcard include/config/fs/posix/acl.h) \
+    $(wildcard include/config/security.h) \
+    $(wildcard include/config/quota.h) \
+    $(wildcard include/config/fsnotify.h) \
+    $(wildcard include/config/ima.h) \
+    $(wildcard include/config/epoll.h) \
+    $(wildcard include/config/debug/writecount.h) \
+    $(wildcard include/config/file/locking.h) \
+    $(wildcard include/config/auditsyscall.h) \
+    $(wildcard include/config/block.h) \
+    $(wildcard include/config/fs/xip.h) \
+    $(wildcard include/config/migration.h) \
+  include/linux/kdev_t.h \
+  include/uapi/linux/kdev_t.h \
+  include/linux/dcache.h \
+  include/linux/rculist.h \
+  include/linux/rculist_bl.h \
+  include/linux/list_bl.h \
+  include/linux/bit_spinlock.h \
+  include/linux/lockref.h \
+    $(wildcard include/config/arch/use/cmpxchg/lockref.h) \
+  include/linux/path.h \
+  include/linux/list_lru.h \
+  include/linux/radix-tree.h \
+  include/linux/pid.h \
+  include/linux/capability.h \
+  include/uapi/linux/capability.h \
+  /home/slee/repos/toradex/linux-toradex/include/uapi/linux/fiemap.h \
+  include/linux/shrinker.h \
+  include/linux/migrate_mode.h \
+  include/linux/percpu-rwsem.h \
+  include/linux/blk_types.h \
+    $(wildcard include/config/blk/cgroup.h) \
+    $(wildcard include/config/blk/dev/integrity.h) \
+  include/uapi/linux/fs.h \
+  /home/slee/repos/toradex/linux-toradex/include/uapi/linux/limits.h \
+  /home/slee/repos/toradex/linux-toradex/include/uapi/linux/ioctl.h \
+  arch/arm/include/generated/asm/ioctl.h \
+  include/asm-generic/ioctl.h \
+  include/uapi/asm-generic/ioctl.h \
+  include/linux/quota.h \
+    $(wildcard include/config/quota/netlink/interface.h) \
+  include/linux/percpu_counter.h \
+  /home/slee/repos/toradex/linux-toradex/include/uapi/linux/dqblk_xfs.h \
+  include/linux/dqblk_v1.h \
+  include/linux/dqblk_v2.h \
+  include/linux/dqblk_qtree.h \
+  include/linux/projid.h \
+  include/uapi/linux/quota.h \
+  include/linux/nfs_fs_i.h \
+  include/linux/fcntl.h \
+  include/uapi/linux/fcntl.h \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/uapi/asm/fcntl.h \
+  /home/slee/repos/toradex/linux-toradex/include/uapi/asm-generic/fcntl.h \
+  include/linux/proc_fs.h \
+    $(wildcard include/config/proc/fs.h) \
+  include/linux/seq_file.h \
+  include/linux/cdev.h \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/system.h \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/switch_to.h \
+    $(wildcard include/config/cpu/v7.h) \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/system_info.h \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/system_misc.h \
+  include/linux/reboot.h \
+  include/uapi/linux/reboot.h \
+  arch/arm/include/generated/asm/emergency-restart.h \
+  include/asm-generic/emergency-restart.h \
+  /home/slee/repos/toradex/linux-toradex/arch/arm/include/asm/uaccess.h \
+  /home/slee/CLionProjects/linux-device-drivers-c/examples/scull/scull.h \
 
-/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o: $(deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o)
+/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.o: $(deps_/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.o)
 
-$(deps_/home/slee/CLionProjects/linux-device-drivers-c/modules/hello/hello.mod.o):
+$(deps_/home/slee/CLionProjects/linux-device-drivers-c/examples/scull/main.o):

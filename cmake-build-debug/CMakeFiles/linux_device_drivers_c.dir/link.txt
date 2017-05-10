@@ -1,1 +1,1 @@
-/usr/bin/cc  -g   CMakeFiles/linux_device_drivers_c.dir/main.c.o CMakeFiles/linux_device_drivers_c.dir/hello.c.o  -o linux_device_drivers_c 
+/usr/local/gcc-linaro/bin/arm-linux-gnueabihf-gcc  -g   CMakeFiles/linux_device_drivers_c.dir/ldd3/scull/test/main.c.o  -o linux_device_drivers_c 

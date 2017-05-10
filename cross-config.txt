@@ -1,0 +1,4 @@
+export ARCH=arm
+export PATH=/usr/local/gcc-linaro/bin/:$PATH
+export CROSS_COMPILE=arm-linux-gnueabihf-
+export KERNELDIR=/home/slee/repos/toradex/linux-toradex

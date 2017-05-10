@@ -14,7 +14,8 @@
  *
  */
 
-#include <linux/config.h>
+//#include <linux/config.h>
+#include <linux/semaphore.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
 #include <linux/init.h>
@@ -553,7 +554,7 @@ struct file_operations scull_fops = {
 	.llseek =   scull_llseek,
 	.read =     scull_read,
 	.write =    scull_write,
-	.ioctl =    scull_ioctl,
+//	.ioctl =    scull_ioctl,
 	.open =     scull_open,
 	.release =  scull_release,
 };
@@ -649,7 +650,7 @@ int scull_init_module(void)
 	for (i = 0; i < scull_nr_devs; i++) {
 		scull_devices[i].quantum = scull_quantum;
 		scull_devices[i].qset = scull_qset;
-		init_MUTEX(&scull_devices[i].sem);
+		mutex_init(&scull_devices[i].sem);
 		scull_setup_cdev(&scull_devices[i], i);
 	}
 

@@ -1,27 +1,34 @@
 # Comment/uncomment the following line to disable/enable debugging
 #DEBUG = y
 
+
 # Add your debugging flag (or not) to CFLAGS
 ifeq ($(DEBUG),y)
-  DEBFLAGS = -O -g # "-O" is needed to expand inlines
+  DEBFLAGS = -O -g -DSCULL_DEBUG # "-O" is needed to expand inlines
 else
   DEBFLAGS = -O2
 endif
 
-CFLAGS += $(DEBFLAGS) -I$(LDDINCDIR)
+#CFLAGS += $(DEBFLAGS)
+#CFLAGS += -I$(LDDINC)
+
+ccflags-y += $(DEBFLAGS)
+ccflags-y += -I$(LDDINC)
 
 ifneq ($(KERNELRELEASE),)
 # call from kernel build system
 
-obj-m	:= simple.o
+scull-objs := main.o pipe.o access.o
+
+obj-m	:= scull.o
 
 else
 
 KERNELDIR ?= /lib/modules/$(shell uname -r)/build
 PWD       := $(shell pwd)
 
-default:
-	$(MAKE) -C $(KERNELDIR) M=$(PWD) LDDINCDIR=$(PWD)/../include modules
+modules:
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) LDDINC=$(PWD)/../include modules
 
 endif
 
